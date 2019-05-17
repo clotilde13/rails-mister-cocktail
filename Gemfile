@@ -65,3 +65,7 @@ gem 'simple_form'
 
 # Managing secret keys
 gem 'dotenv-rails', groups: [:development, :test]
+
+# Images
+gem 'cloudinary', '~> 1.9.1'
+gem 'carrierwave', '~> 1.2'
