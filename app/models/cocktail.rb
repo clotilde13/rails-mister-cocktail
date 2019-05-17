@@ -4,4 +4,5 @@ class Cocktail < ApplicationRecord
   accepts_nested_attributes_for :doses
 
   validates :name, presence: true, uniqueness: true
+  validates :image, presence: true, uniqueness: true
 end

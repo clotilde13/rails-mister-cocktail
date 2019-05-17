@@ -8,6 +8,7 @@ ingredients = JSON.parse(ingredient_db)
 
 ingredients["drinks"].each { |h|  Ingredient.create(name: h["strIngredient1"]) }
 
+Cocktail.destroy_all
 
 Cocktail.create({
   name: "Pina Colada",
