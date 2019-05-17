@@ -7,12 +7,9 @@
   <body>
     <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= @cocktail.image %>');">
       <div class="container">
-        <div>
-          <h1><%= @cocktail.name %></strong>!</h1>
-          <%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail.id) ,class:"btn btn-black" %>
-        </div>
+        <h1><%= @cocktail.name %></strong>!</h1>
         <div class="box-container">
-          <div>
+          <div class="white-box">
             <h2>Ingredients</h2>
             <ul class="ingredient-list">
               <% @doses.each do |dose| %>
@@ -22,7 +19,7 @@
                 <% end %>
               <% end %>
             </ul>
-
+            <%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail.id) ,class:"btn btn-black" %>
           </div>
         </div>
       </div>
