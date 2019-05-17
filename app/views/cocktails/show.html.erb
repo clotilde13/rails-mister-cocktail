@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Cocktail page</title>
+  </head>
+  <body>
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= @cocktail.image %>');">
+      <div class="container">
+        <div>
+          <h1><%= @cocktail.name %></strong>!</h1>
+          <%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail.id) ,class:"btn btn-black" %>
+        </div>
+        <div class="box-container">
+          <div>
+            <h2>Ingredients</h2>
+            <ul class="ingredient-list">
+              <% @doses.each do |dose| %>
+                <li><%= Ingredient.find(dose.ingredient.id).name %> - <%= dose.description %></li>
+                  <%= link_to cocktail_dose_delete_path(@cocktail.id), class:"delete" do %>
+                  <span>Delete ingredients</span><i class="fas fa-times"></i>
+                <% end %>
+              <% end %>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

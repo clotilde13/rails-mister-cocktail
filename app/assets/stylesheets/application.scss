@@ -11,3 +11,10 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "cocktails";
+
+.btn-black {
+  background-color: black;
+  color: white;
+  height: 40px;
+}

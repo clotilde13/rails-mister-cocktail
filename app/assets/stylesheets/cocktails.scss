@@ -1,0 +1,41 @@
+// Place all the styles related to the Cocktails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.box-container {
+  width: 400px;
+  padding: 20px 30px;
+  background-color: rgba(255,255,255, 0.6);
+  color: black;
+  border-radius: 4px;
+  position: relative;
+}
+
+.delete {
+  font-size: 8px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.fa-times {
+  padding-left: 4px;
+}
+
+.fa-circle{
+  padding-right: 4px;
+  font-size: 8px;
+}
+
+.fa-trash {
+  font-size: 10px;
+}
+
+.list-bullet {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul .ingredient-list {
+  padding-left: none;
+}

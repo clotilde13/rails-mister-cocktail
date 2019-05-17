@@ -1,2 +1,13 @@
 // Import page-specific CSS files here.
 @import "home";
+
+a {
+  text-decoration: none;
+}
+
+.headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
