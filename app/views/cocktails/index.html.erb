@@ -5,12 +5,16 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="container">
-      <div class="headline">
-        <h1>Cocktails are life</h1>
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('/assets/carousel_mixology.jpg');">
+    <div class="banner">
+      <div class="container">
+        <h1>Welcome to your Cocktail Library</h1>
         <%= link_to "Add a cocktail", new_cocktail_path, class:"btn btn-black" %>
       </div>
+      </div>
+    </div>
 
+    <div class="container hp">
       <div class="row">
       <% @cocktails.each do |cocktail| %>
         <%= link_to cocktail_path(cocktail.id), class:'col-sm-12 col-md-6 col-xl-4' do %>
@@ -20,4 +24,5 @@
       </div>
   </body>
 </html>
+
 

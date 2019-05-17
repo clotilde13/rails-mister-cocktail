@@ -7,16 +7,22 @@
   <body>
     <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= @cocktail.image %>');">
       <div class="container">
-        <h1>Add ingredients to your <%= @cocktail.name %></h1>
-        <%= link_to "Return to cocktail", new_cocktail_dose_path(@cocktail.id) ,class:"btn btn-black" %>
+        <div class="container-left">
+          <h1>Add ingredients to </br>your <%= @cocktail.name %></h1>
+          <%= link_to "Return to cocktail", cocktail_path(@cocktail.id) ,class:"btn btn-black" %>
+        </div>
+
+        <div class="box-container">
+          <%= simple_form_for [@cocktail, @dose] do |d|%>
+            <%= d.association :ingredient, as: :select, label: "Select ingredient" %>
+            <%= d.input :description, label: "How much?" %>
+            <%= d.submit "Shake shake", class: "btn btn-primary" %>
+          <% end %>
+        </div>
       </div>
     </div>
-    <div class="container">
-      <%= simple_form_for [@cocktail, @dose] do |d|%>
-        <%= d.association :ingredient, as: :select, label: "Select ingredient" %>
-        <%= d.input :description, label: "How much?" %>
-        <%= d.submit "Shake shake", class: "btn btn-primary" %>
-      <% end %>
-    </div>
+
   </body>
 </html>
+
+
